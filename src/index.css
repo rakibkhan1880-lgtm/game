@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Chakra+Petch:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-gaming: "Chakra Petch", sans-serif;
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Custom radial gradient background for the whole app */
+.app-bg {
+  background: radial-gradient(circle at top left, #312e81, #0f172a), 
+              radial-gradient(circle at bottom right, #581c87, #0f172a);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.watermark-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 120px;
+  font-weight: 900;
+  opacity: 0.03;
+  color: white;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+canvas {
+  touch-action: none;
+  border-radius: 12px;
+}
